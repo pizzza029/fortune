@@ -1,3 +1,8 @@
+/*
+@author erick espinoza
+date 5/8/25
+this is the controller for evey thing that happens in the  pop up window
+ */
 package com.example.fortuneteller;
 
 import javafx.collections.FXCollections;
@@ -17,13 +22,13 @@ public class HelloController {
     @FXML private ListView<String> fortuneListView;
 
     // Primary functionality
-    @FXML
+    @FXML//this is the method that generates the random Fortune by calling another method in a different class
     protected void onGenerateFortuneClick() {
         fortuneLabel.setText(fortuneLogic.getRandomFortune());
     }
 
     @FXML
-    protected void onAddFortuneClick() {
+    protected void onAddFortuneClick() {//is the method that adds up different Fortune by calling a method in the fortune counter class
         String newFortune = newFortuneField.getText().trim();
         if (newFortune.isEmpty()) {//this is where I have my exception handling for adding a new Fortune
             showAlert("Input Required", "Please enter a fortune message");
@@ -34,7 +39,7 @@ public class HelloController {
         updateFortuneList();
     }
 
-    @FXML
+    @FXML//this is a method that removes a fortune by calling a method in the fortune counter class
     protected void onRemoveFortuneClick() {
         int selectedIndex = fortuneListView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
@@ -46,11 +51,11 @@ public class HelloController {
     }
 
     // this is for initialize the  updates
-    @FXML
+    @FXML// this initialize the list of fortune
     public void initialize() {
         updateFortuneList();
     }
-
+// this updates  the list of fortune after i add or remove one
     private void updateFortuneList() {
         fortuneList.setAll(fortuneLogic.getAllFortunes());
         fortuneListView.setItems(fortuneList);

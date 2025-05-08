@@ -1,3 +1,5 @@
+
+//this is just the application and it sets the parameters and the name for the pop-up window
 package com.example.fortuneteller;
 
 import javafx.application.Application;
