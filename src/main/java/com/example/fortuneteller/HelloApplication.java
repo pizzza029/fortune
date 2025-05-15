@@ -1,4 +1,7 @@
-
+/*
+@author erick espinoza
+date 5/8/25
+    */
 //this is just the application and it sets the parameters and the name for the pop-up window
 package com.example.fortuneteller;
 
