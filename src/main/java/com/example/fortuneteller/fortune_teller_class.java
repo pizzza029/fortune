@@ -1,3 +1,7 @@
+/*
+@author erick espinoza
+date 5/8/25
+*/
 //this is the fortune teller class this is what I actually called back to win the controller to implement what I want to do
 package com.example.fortuneteller;
 
